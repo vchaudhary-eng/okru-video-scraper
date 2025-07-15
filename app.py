@@ -17,4 +17,5 @@ def index():
     return render_template('index.html', results=results, urls=urls)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # ✅ THIS IS THE FIX FOR RENDER
+    app.run(host='0.0.0.0', port=10000)
